@@ -16,7 +16,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     var centralManager = CBCentralManager()
     var myPeripheral: CBPeripheral!
-    var data = NSMutableData()
+    var data = NSData()
     
 
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
-        data.length = 0
+//        data.length = 0
         peripheral.delegate = self
         peripheral.discoverServices([serviceUDID])
     }
@@ -82,25 +82,23 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print("there is an error")
             print(error.debugDescription)
         }
+
+        data = characteristic.value!
+//        data.appendData(characteristic.value!)
+        var numberArray = [data]
+        if numberArray[0] == "129" {
+            print("data is \(data)")
+        }
         
-        data.appendData(characteristic.value!)
-        print("data is \(data)")
+        
+        
         
         //TO DO: decode data
         var values = [UInt8](count:data.length, repeatedValue:0)
         data.getBytes(&values, length: data.length)
         print("values is \(values)")
         
-        
-        let stringFromData = NSString.init(data: self.data, encoding: NSUTF8StringEncoding)
-        print("string from Data is \(stringFromData)")
-        
-
-        
-        
-//        let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions())
-//        print("base64String is \(base64String)")
-        
+        //THIS WILL NEVER HAPPEN
 //        if stringFromData == "EOM" {
 //            centralManager.cancelPeripheralConnection(peripheral)
 //        }
