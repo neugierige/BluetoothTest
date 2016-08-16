@@ -31,7 +31,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
-        print("discovered \(peripheral.name)!")
+        
         if myPeripheral != peripheral {
             myPeripheral = peripheral
             print("myPeripheral is \(myPeripheral.name)")
@@ -90,9 +90,9 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let stringFromData = NSString.init(data: self.data, encoding: NSUTF8StringEncoding)
         print("string from Data is \(stringFromData)")
         
-        if stringFromData == "EOM" {
-            centralManager.cancelPeripheralConnection(peripheral)
-        }
+//        if stringFromData == "EOM" {
+//            centralManager.cancelPeripheralConnection(peripheral)
+//        }
 
     }
     
@@ -108,7 +108,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
         
         if characteristic.isNotifying {
-            print("characteristic \(characteristic) is notifying")
+            print("characteristic is notifying")
         } else {
             print("characteristic is NOT notifying")
             centralManager.cancelPeripheralConnection(peripheral)
