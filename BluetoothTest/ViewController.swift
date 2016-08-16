@@ -18,6 +18,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     var myPeripheral: CBPeripheral!
     var data = NSMutableData()
     
+
+    
+//    **** central manager methods ****
+    
+    
     func centralManagerDidUpdateState(central: CBCentralManager) {
         if central.state == CBCentralManagerState.PoweredOn {
             centralManager.scanForPeripheralsWithServices([serviceUDID], options: [ CBCentralManagerScanOptionAllowDuplicatesKey: true])
@@ -36,6 +41,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
+        data.length = 0
         peripheral.delegate = self
         peripheral.discoverServices([serviceUDID])
     }
@@ -43,8 +49,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     
     
-//    **** methods on the peripheral ****
-    
+//    **** peripheral methods ****
     
     
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
@@ -78,11 +83,16 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print(error.debugDescription)
         }
         
-        let stringFromData = NSString.init(data: self.data, encoding: NSUTF8StringEncoding)
-        print("data says:")
-        print(stringFromData)
-        
         data.appendData(characteristic.value!)
+        print("data is \(data)")
+        
+        //TO DO: decode data
+        let stringFromData = NSString.init(data: self.data, encoding: NSUTF8StringEncoding)
+        print("string from Data is \(stringFromData)")
+        
+        if stringFromData == "EOM" {
+            centralManager.cancelPeripheralConnection(peripheral)
+        }
 
     }
     
