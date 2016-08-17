@@ -156,23 +156,41 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print("there is an error")
             print(error.debugDescription)
         }
-        wheel.stopAnimating()
         
         data = characteristic.value!
         var values = [UInt8](count:data.length, repeatedValue:0)
         data.getBytes(&values, length: data.length)
         
         if values[0] == 129 {
-            pulseRate = Int(values[1])
-            pulseRateValue.text = String(pulseRate)
+            if values[1] == 255 {
+                pulseRateValue.text = "..."
+                wheel.startAnimating()
+            } else {
+                wheel.stopAnimating()
+                pulseRate = Int(values[1])
+                pulseRateValue.text = String(pulseRate)
+            }
             
-            o2Level = Int(values[2])
-            o2LevelValue.text = String(o2Level) + "%"
+            if values[2] == 127 {
+                o2LevelValue.text = "..."
+                wheel.startAnimating()
+            } else {
+                wheel.stopAnimating()
+                o2Level = Int(values[2])
+                o2LevelValue.text = String(o2Level) + "%"
+            }
             
-            let perfusionDouble = Double(values[3])/10
-            perfusionValue.text = String(perfusionDouble) + "%"
+            if values[3] == 0 {
+                perfusionValue.text = "..."
+                wheel.startAnimating()
+            } else {
+                wheel.stopAnimating()
+                let perfusionDouble = Double(values[3])/10
+                perfusionValue.text = String(perfusionDouble) + "%"
+            }
             
-            print("values is \(values)")
+            
+            print("values are \(values)")
         }
         
         
