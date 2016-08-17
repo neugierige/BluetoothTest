@@ -18,6 +18,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     var myPeripheral: CBPeripheral!
     var data = NSData()
     
+    var wheel = UIActivityIndicatorView()
     
     let pulseRateLabel = UILabel()
     let pulseRateValue = UILabel()
@@ -29,13 +30,15 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     let perfusionLabel = UILabel()
     let perfusionValue = UILabel()
-    var perfusion = Int()
+    var perfusion = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
-        let viewsArray = [pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
+        wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        
+        let viewsArray = [wheel, pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
         for view in viewsArray {
             self.view.addSubview(view)
         }
@@ -43,9 +46,40 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     override func viewWillAppear(animated: Bool) {
         
+        let width = self.view.frame.width/2-20
+        let height: CGFloat = 40
+        let offset: CGFloat = 10
+        
+        wheel.startAnimating()
+        wheel.frame = CGRectMake(self.view.frame.midX-10, self.view.frame.maxY/8, 20, 20)
+        
+        
+        pulseRateLabel.frame = CGRectMake(offset, self.view.frame.maxY/4, width, height)
+        o2LevelLabel.frame = CGRectMake(offset, self.pulseRateLabel.frame.maxY+offset*2, width, height)
+        perfusionLabel.frame = CGRectMake(offset, self.o2LevelLabel.frame.maxY+offset*2, width, height)
+        
+        pulseRateLabel.textAlignment = .Right
+        o2LevelLabel.textAlignment = .Right
+        perfusionLabel.textAlignment = .Right
+        
+        pulseRateLabel.text = "pulse rate: "
+        o2LevelLabel.text = "oxygen level: "
+        perfusionLabel.text = "perfusion index: "
+        
+        
+        pulseRateValue.frame = CGRectMake(self.view.frame.midX+offset, self.view.frame.maxY/4, width, height)
+        o2LevelValue.frame = CGRectMake(self.view.frame.midX+offset, self.pulseRateValue.frame.maxY+offset*2, width, height)
+        perfusionValue.frame = CGRectMake(self.view.frame.midX+offset, self.o2LevelValue.frame.maxY+offset*2, width, height)
+        
+        pulseRateValue.textAlignment = .Left
+        o2LevelValue.textAlignment = .Left
+        perfusionValue.textAlignment = .Left
+        
+        pulseRateValue.text = "..."
+        o2LevelValue.text = "..."
+        perfusionValue.text = "..."
         
     }
-    
     
     
     
@@ -122,25 +156,27 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print("there is an error")
             print(error.debugDescription)
         }
-
+        wheel.stopAnimating()
+        
         data = characteristic.value!
-        
-        
-        //TO DO: decode data
         var values = [UInt8](count:data.length, repeatedValue:0)
         data.getBytes(&values, length: data.length)
         
         if values[0] == 129 {
             pulseRate = Int(values[1])
+            pulseRateValue.text = String(pulseRate)
             
+            o2Level = Int(values[2])
+            o2LevelValue.text = String(o2Level) + "%"
+            
+            let perfusionDouble = Double(values[3])/10
+            perfusionValue.text = String(perfusionDouble) + "%"
             
             print("values is \(values)")
-            
         }
         
         
-        
-        //THIS WILL NEVER HAPPEN
+        //THIS WILL NEVER HAPPEN WILL THIS DEVICE
 //        if stringFromData == "EOM" {
 //            centralManager.cancelPeripheralConnection(peripheral)
 //        }
@@ -165,8 +201,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             centralManager.cancelPeripheralConnection(peripheral)
         }
     }
-    
-
     
     
     
