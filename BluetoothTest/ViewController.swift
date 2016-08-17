@@ -18,16 +18,56 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     var myPeripheral: CBPeripheral!
     var data = NSData()
     
-
+    
+    let pulseRateLabel = UILabel()
+    let pulseRateValue = UILabel()
+    var pulseRate = Int()
+    
+    let o2LevelLabel = UILabel()
+    let o2LevelValue = UILabel()
+    var o2Level = Int()
+    
+    let perfusionLabel = UILabel()
+    let perfusionValue = UILabel()
+    var perfusion = Int()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
+        let viewsArray = [pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
+        for view in viewsArray {
+            self.view.addSubview(view)
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        
+    }
+    
+    
+    
     
 //    **** central manager methods ****
     
     
     func centralManagerDidUpdateState(central: CBCentralManager) {
-        if central.state == CBCentralManagerState.PoweredOn {
+        switch(central.state) {
+        case .Resetting:
+            print("resetting")
+        case .PoweredOn:
             centralManager.scanForPeripheralsWithServices([serviceUDID], options: [ CBCentralManagerScanOptionAllowDuplicatesKey: true])
+            print("powered on")
+        case .PoweredOff:
+            print("powered off")
+        case .Unknown:
+            print("unknown")
+        case .Unsupported:
+            print("unsupported")
+        case .Unauthorized:
+            print("unauthorized")
         }
-        print("status updated")
     }
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
@@ -84,19 +124,21 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
 
         data = characteristic.value!
-//        data.appendData(characteristic.value!)
-        var numberArray = [data]
-        if numberArray[0] == "129" {
-            print("data is \(data)")
-        }
-        
-        
         
         
         //TO DO: decode data
         var values = [UInt8](count:data.length, repeatedValue:0)
         data.getBytes(&values, length: data.length)
-        print("values is \(values)")
+        
+        if values[0] == 129 {
+            pulseRate = Int(values[1])
+            
+            
+            print("values is \(values)")
+            
+        }
+        
+        
         
         //THIS WILL NEVER HAPPEN
 //        if stringFromData == "EOM" {
@@ -124,13 +166,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
-    }
 
     
     
