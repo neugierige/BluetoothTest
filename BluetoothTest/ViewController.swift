@@ -34,59 +34,83 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     let perfusionValue = UILabel()
     var perfusion = String()
     
+    let fontName = "Avenir-Heavy"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.flatBelizeHoleColor()
         wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-        let viewsArray = [pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
+        let viewsArray = [o2LevelLabel, o2LevelValue, pulseRateLabel, pulseRateValue, perfusionLabel, perfusionValue]
         for view in viewsArray {
             self.view.addSubview(view)
             view.textColor = UIColor.whiteColor()
+            view.textAlignment = .Center
+            view.baselineAdjustment = .AlignCenters
         }
         self.view.addSubview(wheel)
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
         
-        let width = self.view.frame.width/2-20
-        let height: CGFloat = 40
-        let offset: CGFloat = 10
+        let width = self.view.frame.width
+//        let height = self.view.frame.height
+        let heightOffset: CGFloat = 60
         
         wheel.startAnimating()
-        wheel.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.width)
-        //wheel.frame = CGRectMake(self.view.frame.midX-10, self.view.frame.maxY/8, 20, 20)
-        
-        pulseRateLabel.frame = CGRectMake(offset, self.view.frame.maxY/4, width, height)
-        o2LevelLabel.frame = CGRectMake(offset, self.pulseRateLabel.frame.maxY+offset*2, width, height)
-        perfusionLabel.frame = CGRectMake(offset, self.o2LevelLabel.frame.maxY+offset*2, width, height)
-        
-        pulseRateLabel.textAlignment = .Right
-        o2LevelLabel.textAlignment = .Right
-        perfusionLabel.textAlignment = .Right
-        
-        pulseRateLabel.text = "pulse rate: "
-        o2LevelLabel.text = "oxygen level: "
-        perfusionLabel.text = "perfusion index: "
+        wheel.frame = CGRectMake(0, self.view.frame.maxY/2-width/2, width, width)
+        wheel.transform = CGAffineTransformMakeScale(5.0, 5.0)
         
         
-        pulseRateValue.frame = CGRectMake(self.view.frame.midX+offset, self.view.frame.maxY/4, width, height)
-        o2LevelValue.frame = CGRectMake(self.view.frame.midX+offset, self.pulseRateValue.frame.maxY+offset*2, width, height)
-        perfusionValue.frame = CGRectMake(self.view.frame.midX+offset, self.o2LevelValue.frame.maxY+offset*2, width, height)
-        
-        pulseRateValue.textAlignment = .Left
-        o2LevelValue.textAlignment = .Left
-        perfusionValue.textAlignment = .Left
-        
-        pulseRateValue.text = "..."
         o2LevelValue.text = "..."
+        pulseRateValue.text = "..."
         perfusionValue.text = "..."
+        
+        o2LevelLabel.text = "oxygen level (%)"
+        pulseRateLabel.text = "pulse rate"
+        perfusionLabel.text = "PI (%)"
+        
+        o2LevelValue.frame = CGRectMake(0, 0, width, width-heightOffset)
+        o2LevelValue.font = UIFont(name: fontName, size: 140)
+        o2LevelLabel.frame = CGRectMake(0, self.o2LevelValue.frame.maxY, width, heightOffset)
+        o2LevelLabel.font = UIFont(name: fontName, size: 20)
+        
+        
+        pulseRateLabel.translatesAutoresizingMaskIntoConstraints = false
+        perfusionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addConstraint(NSLayoutConstraint(item: self.pulseRateLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.perfusionLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.pulseRateLabel, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.perfusionLabel, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.pulseRateLabel, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.5, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.perfusionLabel, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 0.5, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: self.pulseRateLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: heightOffset))
+        self.view.addConstraint(NSLayoutConstraint(item: self.perfusionLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: heightOffset))
+        
+        pulseRateValue.font = UIFont(name: fontName, size: 60)
+        pulseRateLabel.font = UIFont(name: fontName, size: 20)
+        
+        
+        perfusionValue.font = UIFont(name: fontName, size: 60)
+        perfusionLabel.font = UIFont(name: fontName, size: 20)
         
     }
     
+    override func viewDidLayoutSubviews() {
+        let width = self.view.frame.width
+        pulseRateValue.frame = CGRectMake(0,
+                                          self.o2LevelLabel.frame.maxY,
+                                          width/2,
+                                          self.pulseRateLabel.frame.minY-self.o2LevelLabel.frame.maxY)
+        
+        perfusionValue.frame = CGRectMake(self.pulseRateValue.frame.maxX,
+                                          self.o2LevelLabel.frame.maxY,
+                                          width/2,
+                                          pulseRateValue.frame.height)
+    }
     
     
 //    **** central manager methods ****
@@ -110,17 +134,14 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
-        
         if myPeripheral != peripheral {
             myPeripheral = peripheral
             print("myPeripheral is \(myPeripheral.name)")
             centralManager.connectPeripheral(myPeripheral, options: nil)
         }
-        
     }
     
     func centralManager(central: CBCentralManager, didConnectPeripheral peripheral: CBPeripheral) {
-//        data.length = 0
         peripheral.delegate = self
         peripheral.discoverServices([serviceUDID])
     }
@@ -129,7 +150,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     
 //    **** peripheral methods ****
-    
     
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
         if (error != nil) {
@@ -166,6 +186,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         var values = [UInt8](count:data.length, repeatedValue:0)
         data.getBytes(&values, length: data.length)
         
+        self.view.addSubview(o2LevelValue)
         if values[0] == 129 {
             if values[1] == 255 || values[2] == 127 || values[3] == 0 {
                 wheel.startAnimating()
@@ -176,14 +197,21 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             } else {
                 wheel.stopAnimating()
                 
+                self.view.addSubview(o2LevelValue)
+                o2Level = Int(values[2])
+                o2LevelValue.text = String(o2Level)
+                o2LevelValue.alpha = 1.0
+                UIView.animateWithDuration(0.9, delay: 0.0, options: .CurveEaseInOut, animations: {
+                    self.o2LevelValue.alpha = 0
+                    }, completion: {
+                        (value: Bool) in
+                        self.o2LevelValue.removeFromSuperview()
+                })
                 pulseRate = Int(values[1])
                 pulseRateValue.text = String(pulseRate)
                 
-                o2Level = Int(values[2])
-                o2LevelValue.text = String(o2Level) + "%"
-                
                 let perfusionDouble = Double(values[3])/10
-                perfusionValue.text = String(perfusionDouble) + "%"
+                perfusionValue.text = String(perfusionDouble)
             }
             print("values are \(values)")
         }
