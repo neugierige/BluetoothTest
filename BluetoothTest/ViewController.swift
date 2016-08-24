@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreBluetooth
+import UIColor_FlatColors
+
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
 
@@ -35,12 +37,15 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.flatBelizeHoleColor()
         wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-        let viewsArray = [wheel, pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
+        let viewsArray = [pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
         for view in viewsArray {
             self.view.addSubview(view)
+            view.textColor = UIColor.whiteColor()
         }
+        self.view.addSubview(wheel)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -52,7 +57,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let offset: CGFloat = 10
         
         wheel.startAnimating()
-        wheel.frame = CGRectMake(self.view.frame.midX-10, self.view.frame.maxY/8, 20, 20)
+        wheel.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.width)
+        //wheel.frame = CGRectMake(self.view.frame.midX-10, self.view.frame.maxY/8, 20, 20)
         
         pulseRateLabel.frame = CGRectMake(offset, self.view.frame.maxY/4, width, height)
         o2LevelLabel.frame = CGRectMake(offset, self.pulseRateLabel.frame.maxY+offset*2, width, height)

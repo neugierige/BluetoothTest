@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA5F0241B20941BE34BD6E9 /* Pods_BluetoothTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87A99A20971BA53ECC59FB /* Pods_BluetoothTestUITests.framework */; };
+		72F62F5D86B0852EBA1661C8 /* Pods_BluetoothTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B5DC64AD128984210FFA9E /* Pods_BluetoothTest.framework */; };
 		B1CED2BF1D5D351A007460F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CED2BE1D5D351A007460F1 /* AppDelegate.swift */; };
 		B1CED2C11D5D351A007460F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CED2C01D5D351A007460F1 /* ViewController.swift */; };
 		B1CED2C41D5D351A007460F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1CED2C21D5D351A007460F1 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		B1CED2C91D5D351A007460F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1CED2C71D5D351A007460F1 /* LaunchScreen.storyboard */; };
 		B1CED2D41D5D351A007460F1 /* BluetoothTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CED2D31D5D351A007460F1 /* BluetoothTestTests.swift */; };
 		B1CED2DF1D5D351A007460F1 /* BluetoothTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CED2DE1D5D351A007460F1 /* BluetoothTestUITests.swift */; };
+		EF75E006EB5C803CDCDB6579 /* Pods_BluetoothTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D42094BC8BEBA761CC0F578 /* Pods_BluetoothTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03EEE8598054DEF961D814AD /* Pods-BluetoothTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTestUITests/Pods-BluetoothTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		04C9B1D62AE7B664114223DF /* Pods-BluetoothTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest.release.xcconfig"; sourceTree = "<group>"; };
+		1D42094BC8BEBA761CC0F578 /* Pods_BluetoothTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E87A99A20971BA53ECC59FB /* Pods_BluetoothTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49776269CC80C9B9A1912225 /* Pods-BluetoothTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest.debug.xcconfig"; sourceTree = "<group>"; };
+		66B5DC64AD128984210FFA9E /* Pods_BluetoothTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B80A5882E4180D4E05B9448 /* Pods-BluetoothTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTestUITests/Pods-BluetoothTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1CED2BB1D5D351A007460F1 /* BluetoothTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CED2BE1D5D351A007460F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1CED2C01D5D351A007460F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		B1CED2DA1D5D351A007460F1 /* BluetoothTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CED2DE1D5D351A007460F1 /* BluetoothTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTestUITests.swift; sourceTree = "<group>"; };
 		B1CED2E01D5D351A007460F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E165F6656A21159347FBF194 /* Pods-BluetoothTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFCA8E9B06381540F94BECFB /* Pods-BluetoothTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BluetoothTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F62F5D86B0852EBA1661C8 /* Pods_BluetoothTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF75E006EB5C803CDCDB6579 /* Pods_BluetoothTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA5F0241B20941BE34BD6E9 /* Pods_BluetoothTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				B1CED2D21D5D351A007460F1 /* BluetoothTestTests */,
 				B1CED2DD1D5D351A007460F1 /* BluetoothTestUITests */,
 				B1CED2BC1D5D351A007460F1 /* Products */,
+				C80AC29ECEB4455797E50C53 /* Pods */,
+				DEABD665D36A091184C7F925 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = BluetoothTestUITests;
 			sourceTree = "<group>";
 		};
+		C80AC29ECEB4455797E50C53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49776269CC80C9B9A1912225 /* Pods-BluetoothTest.debug.xcconfig */,
+				04C9B1D62AE7B664114223DF /* Pods-BluetoothTest.release.xcconfig */,
+				E165F6656A21159347FBF194 /* Pods-BluetoothTestTests.debug.xcconfig */,
+				EFCA8E9B06381540F94BECFB /* Pods-BluetoothTestTests.release.xcconfig */,
+				8B80A5882E4180D4E05B9448 /* Pods-BluetoothTestUITests.debug.xcconfig */,
+				03EEE8598054DEF961D814AD /* Pods-BluetoothTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEABD665D36A091184C7F925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66B5DC64AD128984210FFA9E /* Pods_BluetoothTest.framework */,
+				1D42094BC8BEBA761CC0F578 /* Pods_BluetoothTestTests.framework */,
+				2E87A99A20971BA53ECC59FB /* Pods_BluetoothTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1CED2E31D5D351A007460F1 /* Build configuration list for PBXNativeTarget "BluetoothTest" */;
 			buildPhases = (
+				9C7EB93D746E2643B1BC49CC /* [CP] Check Pods Manifest.lock */,
 				B1CED2B71D5D351A007460F1 /* Sources */,
 				B1CED2B81D5D351A007460F1 /* Frameworks */,
 				B1CED2B91D5D351A007460F1 /* Resources */,
+				7AF6F2A64A0225B4DAFCF915 /* [CP] Embed Pods Frameworks */,
+				E60AF45AD610172F32915C0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1CED2E61D5D351A007460F1 /* Build configuration list for PBXNativeTarget "BluetoothTestTests" */;
 			buildPhases = (
+				2D171BDA4D6230C00671ED84 /* [CP] Check Pods Manifest.lock */,
 				B1CED2CB1D5D351A007460F1 /* Sources */,
 				B1CED2CC1D5D351A007460F1 /* Frameworks */,
 				B1CED2CD1D5D351A007460F1 /* Resources */,
+				AF000A4BBAEE905427028FAC /* [CP] Embed Pods Frameworks */,
+				43E926F97F0F9C80992CAA50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1CED2E91D5D351A007460F1 /* Build configuration list for PBXNativeTarget "BluetoothTestUITests" */;
 			buildPhases = (
+				D15BC40CBAE3EDC27E8B74AB /* [CP] Check Pods Manifest.lock */,
 				B1CED2D61D5D351A007460F1 /* Sources */,
 				B1CED2D71D5D351A007460F1 /* Frameworks */,
 				B1CED2D81D5D351A007460F1 /* Resources */,
+				218377F9C30C28AE03A63856 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +301,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		218377F9C30C28AE03A63856 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluetoothTestUITests/Pods-BluetoothTestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D171BDA4D6230C00671ED84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		43E926F97F0F9C80992CAA50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AF6F2A64A0225B4DAFCF915 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7EB93D746E2643B1BC49CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF000A4BBAEE905427028FAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D15BC40CBAE3EDC27E8B74AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E60AF45AD610172F32915C0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1CED2B71D5D351A007460F1 /* Sources */ = {
@@ -402,6 +573,7 @@
 		};
 		B1CED2E41D5D351A007460F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49776269CC80C9B9A1912225 /* Pods-BluetoothTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BluetoothTest/Info.plist;
@@ -413,6 +585,7 @@
 		};
 		B1CED2E51D5D351A007460F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04C9B1D62AE7B664114223DF /* Pods-BluetoothTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BluetoothTest/Info.plist;
@@ -424,6 +597,7 @@
 		};
 		B1CED2E71D5D351A007460F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E165F6656A21159347FBF194 /* Pods-BluetoothTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BluetoothTestTests/Info.plist;
@@ -436,6 +610,7 @@
 		};
 		B1CED2E81D5D351A007460F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCA8E9B06381540F94BECFB /* Pods-BluetoothTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BluetoothTestTests/Info.plist;
@@ -448,6 +623,7 @@
 		};
 		B1CED2EA1D5D351A007460F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B80A5882E4180D4E05B9448 /* Pods-BluetoothTestUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BluetoothTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -459,6 +635,7 @@
 		};
 		B1CED2EB1D5D351A007460F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03EEE8598054DEF961D814AD /* Pods-BluetoothTestUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BluetoothTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +664,7 @@
 				B1CED2E51D5D351A007460F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1CED2E61D5D351A007460F1 /* Build configuration list for PBXNativeTarget "BluetoothTestTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +673,7 @@
 				B1CED2E81D5D351A007460F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1CED2E91D5D351A007460F1 /* Build configuration list for PBXNativeTarget "BluetoothTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +682,7 @@
 				B1CED2EB1D5D351A007460F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

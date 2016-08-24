@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1695706EA4C7E25B0C002989F29E975F /* Pods-BluetoothTestTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECF4119DCB98309198E87E9D2F38191C /* Pods-BluetoothTestTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A5DCD0592DEDAE9BBFE490A194F80C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		1C41BB40FBE51E0F5F75B27E5ADDCDB9 /* Pods-BluetoothTestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0983B3B801FA0E851F1568EE0EF02976 /* Pods-BluetoothTestTests-dummy.m */; };
+		40744BCD2333FB8070C7E862D0E44835 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D68B8F84F36A491EA724686AD07EF9 /* UIColor+FlatColors.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6B181E0E9236530B20BA18FB567E338C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		6EF803B146D517F67F786D8B712BEE1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		73A49CB0A315E0FE8B18878ECAE5CABE /* Pods-BluetoothTestUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 218438D38BE70E3546BE00EE43C1D6C4 /* Pods-BluetoothTestUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A24D02B3EF81EB09FABB897D6F2201A2 /* UIColor+FlatColors.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6B04B5AD9667AD662D22A4ABCCADA2 /* UIColor+FlatColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE7CE0D6185970359F61F6B396473E47 /* UIColor+FlatColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE2153EB99A88DF79A2FCFB8EA32540A /* UIColor+FlatColors-dummy.m */; };
+		BED6CC08056E2F11222E2CCC1BA4A6D3 /* Pods-BluetoothTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B71C2B1EF4FA63A2023643F0A3CE4A /* Pods-BluetoothTest-dummy.m */; };
+		D86605667F81943A92C0143F46D5E8A3 /* Pods-BluetoothTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BAA112BFDC23617EC5813B8E96DD29 /* Pods-BluetoothTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4529683BA5E7CCD3AE2368D81829F44 /* UIColor+FlatColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C42EBCD10B6DF983716F2BD4588E7A /* UIColor+FlatColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7186F500F2541241CF6163C3D3A7700 /* Pods-BluetoothTestUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68172534F6A64179CCD288D4D1FC9F07 /* Pods-BluetoothTestUITests-dummy.m */; };
+		F3172CC7C624FC1F76E7BBE3E59A52EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8B3721751B17B070AAF26FCE30F3BF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D867FE8F51564B7ECF2CDC2C3DED8757;
+			remoteInfo = "UIColor+FlatColors";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0983B3B801FA0E851F1568EE0EF02976 /* Pods-BluetoothTestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BluetoothTestTests-dummy.m"; sourceTree = "<group>"; };
+		11C42EBCD10B6DF983716F2BD4588E7A /* UIColor+FlatColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors-umbrella.h"; sourceTree = "<group>"; };
+		218438D38BE70E3546BE00EE43C1D6C4 /* Pods-BluetoothTestUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BluetoothTestUITests-umbrella.h"; sourceTree = "<group>"; };
+		22648EB7181C8D3280F107401D8DAC08 /* Pods-BluetoothTest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTest-resources.sh"; sourceTree = "<group>"; };
+		29E0A0D39EF6E6FBAC72EE034AB29108 /* Pods_BluetoothTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0BB0DA878FB1322AA065F5D72422FD /* Pods-BluetoothTestTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTestTests-resources.sh"; sourceTree = "<group>"; };
+		35E1892E61C8738DFF907A9F876216D3 /* Pods-BluetoothTestUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BluetoothTestUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		35FB6C001F4B7ED4F505279C5DC89367 /* Pods-BluetoothTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39925436053140D221AFCC01F11693E8 /* Pods-BluetoothTestUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BluetoothTestUITests.modulemap"; sourceTree = "<group>"; };
+		40D7D4ABA1E5BBCB32ED4BF7A2B3F915 /* Pods_BluetoothTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41DFB4185EC7701B40E4C2F01FB67A1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CB6E683370F974C145E6615BC666FB4 /* UIColor+FlatColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors-prefix.pch"; sourceTree = "<group>"; };
+		56487ECCF9706D2B8E2C414102F3755A /* Pods-BluetoothTestTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BluetoothTestTests.modulemap"; sourceTree = "<group>"; };
+		6344BF68D43DC1A75C3B1BD271EDE56E /* Pods-BluetoothTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		68172534F6A64179CCD288D4D1FC9F07 /* Pods-BluetoothTestUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BluetoothTestUITests-dummy.m"; sourceTree = "<group>"; };
+		708BB26D1000B0575B1AADBF6EDD3D52 /* UIColor+FlatColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "UIColor+FlatColors.modulemap"; sourceTree = "<group>"; };
+		7CF599F813C2A0F17F4FD991A459B181 /* Pods-BluetoothTestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BluetoothTestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9012AEAE23BA8EA7432570A3CDBB1A83 /* Pods-BluetoothTestUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BluetoothTestUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		92B71C2B1EF4FA63A2023643F0A3CE4A /* Pods-BluetoothTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BluetoothTest-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		945B284587539D388E2FD9D623C498E7 /* UIColor+FlatColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+FlatColors.xcconfig"; sourceTree = "<group>"; };
+		95A4D08EF92EA316E8FEDA2210FCC4A2 /* Pods-BluetoothTestTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTestTests-frameworks.sh"; sourceTree = "<group>"; };
+		A4962CAEE3D891A4878EE20322230F5C /* Pods-BluetoothTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AF6B04B5AD9667AD662D22A4ABCCADA2 /* UIColor+FlatColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatColors.h"; path = "UIColor+FlatColors/UIColor+FlatColors.h"; sourceTree = "<group>"; };
+		B5055ED6FD503E0843B5C6E8924C0247 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6652B820B37F09BC9B94D1027130ED8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA1C90611F540DD47D963D60BCB944F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF15D020012D5D6471D6ED0DD6A09FF7 /* Pods-BluetoothTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6901D05BB7729F440BE67BB35B63C89 /* Pods-BluetoothTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BluetoothTest.modulemap"; sourceTree = "<group>"; };
+		C8E62BCDB74C56189104845F71807AAF /* Pods-BluetoothTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTest.release.xcconfig"; sourceTree = "<group>"; };
+		C9BAA112BFDC23617EC5813B8E96DD29 /* Pods-BluetoothTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BluetoothTest-umbrella.h"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D78A8E27775EEA2694B8411623075B10 /* Pods-BluetoothTestUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTestUITests-resources.sh"; sourceTree = "<group>"; };
+		D81112E99A042C9B2302C8DCCAC8AD24 /* Pods-BluetoothTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BluetoothTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA8AACBAC222CAC744F814F485EE33EE /* Pods-BluetoothTestUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTestUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E09E53226E3B642C3ED19552F2FCA776 /* Pods-BluetoothTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BluetoothTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		EADA1801D8FDFDC811E81752EB9E9DA6 /* UIColor_FlatColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_FlatColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6D99E7E3C1DAF1F8364BC3DE285859 /* Pods-BluetoothTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BluetoothTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ECF4119DCB98309198E87E9D2F38191C /* Pods-BluetoothTestTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BluetoothTestTests-umbrella.h"; sourceTree = "<group>"; };
+		EE2153EB99A88DF79A2FCFB8EA32540A /* UIColor+FlatColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors-dummy.m"; sourceTree = "<group>"; };
+		F1A07E6B49AE16297ABA5770B0439B3A /* Pods-BluetoothTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BluetoothTest-frameworks.sh"; sourceTree = "<group>"; };
+		F5DA699A7E21A5F99165E793B1252B9C /* Pods_BluetoothTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BluetoothTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D68B8F84F36A491EA724686AD07EF9 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatColors.m"; path = "UIColor+FlatColors/UIColor+FlatColors.m"; sourceTree = "<group>"; };
+		FCD1D2D71EFA956CCB3F9B7C575FED1C /* Pods-BluetoothTestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BluetoothTestTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16AADC41C494836D1E5E8593CF46A3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B181E0E9236530B20BA18FB567E338C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8060682D3A814A89B8B238F29E862ED0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5DCD0592DEDAE9BBFE490A194F80C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CE13CC5F59C10ED0E473154DAEEC39D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3172CC7C624FC1F76E7BBE3E59A52EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD2FAA590C4BAC72F7E91CBFA5AFD852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EF803B146D517F67F786D8B712BEE1D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E9C2CEC194DE7DD3BE12EDAD6E3DA28 /* Pods-BluetoothTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA1C90611F540DD47D963D60BCB944F3 /* Info.plist */,
+				56487ECCF9706D2B8E2C414102F3755A /* Pods-BluetoothTestTests.modulemap */,
+				7CF599F813C2A0F17F4FD991A459B181 /* Pods-BluetoothTestTests-acknowledgements.markdown */,
+				FCD1D2D71EFA956CCB3F9B7C575FED1C /* Pods-BluetoothTestTests-acknowledgements.plist */,
+				0983B3B801FA0E851F1568EE0EF02976 /* Pods-BluetoothTestTests-dummy.m */,
+				95A4D08EF92EA316E8FEDA2210FCC4A2 /* Pods-BluetoothTestTests-frameworks.sh */,
+				2B0BB0DA878FB1322AA065F5D72422FD /* Pods-BluetoothTestTests-resources.sh */,
+				ECF4119DCB98309198E87E9D2F38191C /* Pods-BluetoothTestTests-umbrella.h */,
+				BF15D020012D5D6471D6ED0DD6A09FF7 /* Pods-BluetoothTestTests.debug.xcconfig */,
+				E09E53226E3B642C3ED19552F2FCA776 /* Pods-BluetoothTestTests.release.xcconfig */,
+			);
+			name = "Pods-BluetoothTestTests";
+			path = "Target Support Files/Pods-BluetoothTestTests";
+			sourceTree = "<group>";
+		};
+		3A449AD17CA1DAEE885D75653446A6AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41DFB4185EC7701B40E4C2F01FB67A1A /* Info.plist */,
+				708BB26D1000B0575B1AADBF6EDD3D52 /* UIColor+FlatColors.modulemap */,
+				945B284587539D388E2FD9D623C498E7 /* UIColor+FlatColors.xcconfig */,
+				EE2153EB99A88DF79A2FCFB8EA32540A /* UIColor+FlatColors-dummy.m */,
+				4CB6E683370F974C145E6615BC666FB4 /* UIColor+FlatColors-prefix.pch */,
+				11C42EBCD10B6DF983716F2BD4588E7A /* UIColor+FlatColors-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor+FlatColors";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7AA532B00E743037B661A1AC9C124DA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9807B6DAFDAE1369BCFDDA4AF3D281C0 /* UIColor+FlatColors */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				7AA532B00E743037B661A1AC9C124DA7 /* Pods */,
+				B274887DBC015ED8B75A2F667D09881B /* Products */,
+				A06704AFA1BC95DE111765DAAA21C87D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9807B6DAFDAE1369BCFDDA4AF3D281C0 /* UIColor+FlatColors */ = {
+			isa = PBXGroup;
+			children = (
+				AF6B04B5AD9667AD662D22A4ABCCADA2 /* UIColor+FlatColors.h */,
+				F8D68B8F84F36A491EA724686AD07EF9 /* UIColor+FlatColors.m */,
+				3A449AD17CA1DAEE885D75653446A6AB /* Support Files */,
+			);
+			path = "UIColor+FlatColors";
+			sourceTree = "<group>";
+		};
+		A06704AFA1BC95DE111765DAAA21C87D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9DC12AB7379446244A1E96192A7A6C8 /* Pods-BluetoothTest */,
+				2E9C2CEC194DE7DD3BE12EDAD6E3DA28 /* Pods-BluetoothTestTests */,
+				E7762653F770762B8A1C0A27F6A0E76B /* Pods-BluetoothTestUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B274887DBC015ED8B75A2F667D09881B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29E0A0D39EF6E6FBAC72EE034AB29108 /* Pods_BluetoothTest.framework */,
+				F5DA699A7E21A5F99165E793B1252B9C /* Pods_BluetoothTestTests.framework */,
+				40D7D4ABA1E5BBCB32ED4BF7A2B3F915 /* Pods_BluetoothTestUITests.framework */,
+				EADA1801D8FDFDC811E81752EB9E9DA6 /* UIColor_FlatColors.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9DC12AB7379446244A1E96192A7A6C8 /* Pods-BluetoothTest */ = {
+			isa = PBXGroup;
+			children = (
+				B5055ED6FD503E0843B5C6E8924C0247 /* Info.plist */,
+				C6901D05BB7729F440BE67BB35B63C89 /* Pods-BluetoothTest.modulemap */,
+				EC6D99E7E3C1DAF1F8364BC3DE285859 /* Pods-BluetoothTest-acknowledgements.markdown */,
+				D81112E99A042C9B2302C8DCCAC8AD24 /* Pods-BluetoothTest-acknowledgements.plist */,
+				92B71C2B1EF4FA63A2023643F0A3CE4A /* Pods-BluetoothTest-dummy.m */,
+				F1A07E6B49AE16297ABA5770B0439B3A /* Pods-BluetoothTest-frameworks.sh */,
+				22648EB7181C8D3280F107401D8DAC08 /* Pods-BluetoothTest-resources.sh */,
+				C9BAA112BFDC23617EC5813B8E96DD29 /* Pods-BluetoothTest-umbrella.h */,
+				A4962CAEE3D891A4878EE20322230F5C /* Pods-BluetoothTest.debug.xcconfig */,
+				C8E62BCDB74C56189104845F71807AAF /* Pods-BluetoothTest.release.xcconfig */,
+			);
+			name = "Pods-BluetoothTest";
+			path = "Target Support Files/Pods-BluetoothTest";
+			sourceTree = "<group>";
+		};
+		E7762653F770762B8A1C0A27F6A0E76B /* Pods-BluetoothTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B6652B820B37F09BC9B94D1027130ED8 /* Info.plist */,
+				39925436053140D221AFCC01F11693E8 /* Pods-BluetoothTestUITests.modulemap */,
+				35E1892E61C8738DFF907A9F876216D3 /* Pods-BluetoothTestUITests-acknowledgements.markdown */,
+				9012AEAE23BA8EA7432570A3CDBB1A83 /* Pods-BluetoothTestUITests-acknowledgements.plist */,
+				68172534F6A64179CCD288D4D1FC9F07 /* Pods-BluetoothTestUITests-dummy.m */,
+				DA8AACBAC222CAC744F814F485EE33EE /* Pods-BluetoothTestUITests-frameworks.sh */,
+				D78A8E27775EEA2694B8411623075B10 /* Pods-BluetoothTestUITests-resources.sh */,
+				218438D38BE70E3546BE00EE43C1D6C4 /* Pods-BluetoothTestUITests-umbrella.h */,
+				6344BF68D43DC1A75C3B1BD271EDE56E /* Pods-BluetoothTestUITests.debug.xcconfig */,
+				35FB6C001F4B7ED4F505279C5DC89367 /* Pods-BluetoothTestUITests.release.xcconfig */,
+			);
+			name = "Pods-BluetoothTestUITests";
+			path = "Target Support Files/Pods-BluetoothTestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E307B2D8C35E0AB58B3321420088EDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1695706EA4C7E25B0C002989F29E975F /* Pods-BluetoothTestTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A116DFD0E5C9B38ECE4D65365625E40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A49CB0A315E0FE8B18878ECAE5CABE /* Pods-BluetoothTestUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29690E934F4F6A3BFC9B50EAB442EF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86605667F81943A92C0143F46D5E8A3 /* Pods-BluetoothTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF96F298D920AC19770BEF08733C4FB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4529683BA5E7CCD3AE2368D81829F44 /* UIColor+FlatColors-umbrella.h in Headers */,
+				A24D02B3EF81EB09FABB897D6F2201A2 /* UIColor+FlatColors.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7BC79DAA3119E1C337A495318B27F450 /* Pods-BluetoothTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A332FE9134B05F14A17EED8AE4E47DA7 /* Build configuration list for PBXNativeTarget "Pods-BluetoothTest" */;
+			buildPhases = (
+				E03C54D4EE942098450090D538331AF1 /* Sources */,
+				16AADC41C494836D1E5E8593CF46A3E2 /* Frameworks */,
+				B29690E934F4F6A3BFC9B50EAB442EF0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9473A5172A81844F75447566832CDB4 /* PBXTargetDependency */,
+			);
+			name = "Pods-BluetoothTest";
+			productName = "Pods-BluetoothTest";
+			productReference = 29E0A0D39EF6E6FBAC72EE034AB29108 /* Pods_BluetoothTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		85F21E310B22BD38E3D609D8E675C3BF /* Pods-BluetoothTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85A30B79229800DCD3F80DA692AF87D5 /* Build configuration list for PBXNativeTarget "Pods-BluetoothTestTests" */;
+			buildPhases = (
+				0F4575C178E545AF766C1B629E95B4CC /* Sources */,
+				9CE13CC5F59C10ED0E473154DAEEC39D /* Frameworks */,
+				1E307B2D8C35E0AB58B3321420088EDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BluetoothTestTests";
+			productName = "Pods-BluetoothTestTests";
+			productReference = F5DA699A7E21A5F99165E793B1252B9C /* Pods_BluetoothTestTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDCD6D7152A540829936B9F6EDFAE80D /* Pods-BluetoothTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99141B0436A6789249A0A9AEAF2A52AD /* Build configuration list for PBXNativeTarget "Pods-BluetoothTestUITests" */;
+			buildPhases = (
+				0CE84492BA43EA3D526BF1A9B28CF74E /* Sources */,
+				8060682D3A814A89B8B238F29E862ED0 /* Frameworks */,
+				7A116DFD0E5C9B38ECE4D65365625E40 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BluetoothTestUITests";
+			productName = "Pods-BluetoothTestUITests";
+			productReference = 40D7D4ABA1E5BBCB32ED4BF7A2B3F915 /* Pods_BluetoothTestUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D867FE8F51564B7ECF2CDC2C3DED8757 /* UIColor+FlatColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7289467A3430366335004ABDFFBDC7 /* Build configuration list for PBXNativeTarget "UIColor+FlatColors" */;
+			buildPhases = (
+				A04F1CD00F7CB801D2BA9A39173A8914 /* Sources */,
+				AD2FAA590C4BAC72F7E91CBFA5AFD852 /* Frameworks */,
+				EF96F298D920AC19770BEF08733C4FB8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIColor+FlatColors";
+			productName = "UIColor+FlatColors";
+			productReference = EADA1801D8FDFDC811E81752EB9E9DA6 /* UIColor_FlatColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B274887DBC015ED8B75A2F667D09881B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC79DAA3119E1C337A495318B27F450 /* Pods-BluetoothTest */,
+				85F21E310B22BD38E3D609D8E675C3BF /* Pods-BluetoothTestTests */,
+				CDCD6D7152A540829936B9F6EDFAE80D /* Pods-BluetoothTestUITests */,
+				D867FE8F51564B7ECF2CDC2C3DED8757 /* UIColor+FlatColors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CE84492BA43EA3D526BF1A9B28CF74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7186F500F2541241CF6163C3D3A7700 /* Pods-BluetoothTestUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F4575C178E545AF766C1B629E95B4CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C41BB40FBE51E0F5F75B27E5ADDCDB9 /* Pods-BluetoothTestTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A04F1CD00F7CB801D2BA9A39173A8914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE7CE0D6185970359F61F6B396473E47 /* UIColor+FlatColors-dummy.m in Sources */,
+				40744BCD2333FB8070C7E862D0E44835 /* UIColor+FlatColors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E03C54D4EE942098450090D538331AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED6CC08056E2F11222E2CCC1BA4A6D3 /* Pods-BluetoothTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9473A5172A81844F75447566832CDB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor+FlatColors";
+			target = D867FE8F51564B7ECF2CDC2C3DED8757 /* UIColor+FlatColors */;
+			targetProxy = F8B3721751B17B070AAF26FCE30F3BF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08B0F0CE9769D9FFD6ED1AA1C84F569C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35FB6C001F4B7ED4F505279C5DC89367 /* Pods-BluetoothTestUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTestUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTestUITests/Pods-BluetoothTestUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTestUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2765261AB1D4D1F6307CFD36F371109C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E09E53226E3B642C3ED19552F2FCA776 /* Pods-BluetoothTestTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTestTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTestTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4697582B93744E288F81D5D0FA24C04F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF15D020012D5D6471D6ED0DD6A09FF7 /* Pods-BluetoothTestTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTestTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTestTests/Pods-BluetoothTestTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTestTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		63F595DCCEADEF73937A72701CC972B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4962CAEE3D891A4878EE20322230F5C /* Pods-BluetoothTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		848F169BD74B47AD8B52F626FACC1C3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6344BF68D43DC1A75C3B1BD271EDE56E /* Pods-BluetoothTestUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTestUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTestUITests/Pods-BluetoothTestUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTestUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB65080ABD4FD89719263614077394F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E62BCDB74C56189104845F71807AAF /* Pods-BluetoothTest.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BluetoothTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BluetoothTest/Pods-BluetoothTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BluetoothTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C04A528BF783AC8ED8E6F69602E21BA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 945B284587539D388E2FD9D623C498E7 /* UIColor+FlatColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+FlatColors/UIColor+FlatColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor+FlatColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor+FlatColors/UIColor+FlatColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UIColor_FlatColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C1226CAB97F3FB34DEDBAA601FE95CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 945B284587539D388E2FD9D623C498E7 /* UIColor+FlatColors.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+FlatColors/UIColor+FlatColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor+FlatColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor+FlatColors/UIColor+FlatColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = UIColor_FlatColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85A30B79229800DCD3F80DA692AF87D5 /* Build configuration list for PBXNativeTarget "Pods-BluetoothTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4697582B93744E288F81D5D0FA24C04F /* Debug */,
+				2765261AB1D4D1F6307CFD36F371109C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99141B0436A6789249A0A9AEAF2A52AD /* Build configuration list for PBXNativeTarget "Pods-BluetoothTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				848F169BD74B47AD8B52F626FACC1C3E /* Debug */,
+				08B0F0CE9769D9FFD6ED1AA1C84F569C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A332FE9134B05F14A17EED8AE4E47DA7 /* Build configuration list for PBXNativeTarget "Pods-BluetoothTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F595DCCEADEF73937A72701CC972B5 /* Debug */,
+				BB65080ABD4FD89719263614077394F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7289467A3430366335004ABDFFBDC7 /* Build configuration list for PBXNativeTarget "UIColor+FlatColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1226CAB97F3FB34DEDBAA601FE95CEB /* Debug */,
+				C04A528BF783AC8ED8E6F69602E21BA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
