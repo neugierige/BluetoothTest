@@ -34,8 +34,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
+        
         wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
         let viewsArray = [wheel, pulseRateLabel, pulseRateValue, o2LevelLabel, o2LevelValue, perfusionLabel, perfusionValue]
@@ -46,13 +45,14 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     override func viewWillAppear(animated: Bool) {
         
+        centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
+        
         let width = self.view.frame.width/2-20
         let height: CGFloat = 40
         let offset: CGFloat = 10
         
         wheel.startAnimating()
         wheel.frame = CGRectMake(self.view.frame.midX-10, self.view.frame.maxY/8, 20, 20)
-        
         
         pulseRateLabel.frame = CGRectMake(offset, self.view.frame.maxY/4, width, height)
         o2LevelLabel.frame = CGRectMake(offset, self.pulseRateLabel.frame.maxY+offset*2, width, height)
@@ -84,7 +84,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     
 //    **** central manager methods ****
-    
     
     func centralManagerDidUpdateState(central: CBCentralManager) {
         switch(central.state) {
@@ -162,39 +161,27 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         data.getBytes(&values, length: data.length)
         
         if values[0] == 129 {
-            if values[1] == 255 {
-                pulseRateValue.text = "..."
+            if values[1] == 255 || values[2] == 127 || values[3] == 0 {
                 wheel.startAnimating()
+                let labels = [pulseRateValue, o2LevelValue, perfusionValue]
+                for item in labels {
+                    item.text = "..."
+                }
             } else {
                 wheel.stopAnimating()
+                
                 pulseRate = Int(values[1])
                 pulseRateValue.text = String(pulseRate)
-            }
-            
-            if values[2] == 127 {
-                o2LevelValue.text = "..."
-                wheel.startAnimating()
-            } else {
-                wheel.stopAnimating()
+                
                 o2Level = Int(values[2])
                 o2LevelValue.text = String(o2Level) + "%"
-            }
-            
-            if values[3] == 0 {
-                perfusionValue.text = "..."
-                wheel.startAnimating()
-            } else {
-                wheel.stopAnimating()
+                
                 let perfusionDouble = Double(values[3])/10
                 perfusionValue.text = String(perfusionDouble) + "%"
             }
-            
-            
             print("values are \(values)")
         }
         
-        
-        //THIS WILL NEVER HAPPEN WILL THIS DEVICE
 //        if stringFromData == "EOM" {
 //            centralManager.cancelPeripheralConnection(peripheral)
 //        }
@@ -220,9 +207,5 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
     }
     
-    
-    
-    
-
 }
 
