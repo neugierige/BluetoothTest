@@ -42,13 +42,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         self.view.backgroundColor = UIColor.flatBelizeHoleColor()
         wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
-        let viewsArray = [o2LevelLabel, o2LevelValue, pulseRateLabel, pulseRateValue, perfusionLabel, perfusionValue]
-        for view in viewsArray {
-            self.view.addSubview(view)
-            view.textColor = UIColor.whiteColor()
-            view.textAlignment = .Center
-            view.baselineAdjustment = .AlignCenters
-        }
         self.view.addSubview(wheel)
     }
     
@@ -56,24 +49,30 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         centralManager = CBCentralManager(delegate: self, queue: dispatch_get_main_queue())
         
         let width = self.view.frame.width
-//        let height = self.view.frame.height
         let heightOffset: CGFloat = 60
+        
+        let viewsArray = [o2LevelLabel, o2LevelValue, pulseRateLabel, pulseRateValue, perfusionLabel, perfusionValue]
+        for view in viewsArray {
+            self.view.addSubview(view)
+            view.textColor = UIColor.whiteColor()
+            view.textAlignment = .Center
+            view.baselineAdjustment = .AlignCenters
+        }
         
         wheel.startAnimating()
         wheel.frame = CGRectMake(0, self.view.frame.maxY/2-width/2, width, width)
         wheel.transform = CGAffineTransformMakeScale(5.0, 5.0)
         
-        
-        o2LevelValue.text = "..."
-        pulseRateValue.text = "..."
-        perfusionValue.text = "..."
+        o2LevelValue.text = "---"
+        pulseRateValue.text = "---"
+        perfusionValue.text = "---"
         
         o2LevelLabel.text = "oxygen level (%)"
         pulseRateLabel.text = "pulse rate"
         perfusionLabel.text = "PI (%)"
         
-        o2LevelValue.frame = CGRectMake(0, 0, width, width-heightOffset)
-        o2LevelValue.font = UIFont(name: fontName, size: 140)
+        o2LevelValue.frame = CGRectMake(0, 30, width, width-heightOffset)
+        o2LevelValue.font = UIFont(name: fontName, size: 180)
         o2LevelLabel.frame = CGRectMake(0, self.o2LevelValue.frame.maxY, width, heightOffset)
         o2LevelLabel.font = UIFont(name: fontName, size: 20)
         
@@ -192,7 +191,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
                 wheel.startAnimating()
                 let labels = [pulseRateValue, o2LevelValue, perfusionValue]
                 for item in labels {
-                    item.text = "..."
+                    item.text = "---"
                 }
             } else {
                 wheel.stopAnimating()
