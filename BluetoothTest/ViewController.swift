@@ -8,8 +8,6 @@
 
 import UIKit
 import CoreBluetooth
-import UIColor_FlatColors
-
 
 class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
 
@@ -39,7 +37,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.flatBelizeHoleColor()
+        self.view.backgroundColor = UIColor(red: 41, green: 128, blue: 185, alpha: 1.0)
         wheel = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         
         self.view.addSubview(wheel)

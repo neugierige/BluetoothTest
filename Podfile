@@ -6,7 +6,6 @@ target 'BluetoothTest' do
   use_frameworks!
 
   # Pods for BluetoothTest
-  pod 'UIColor+FlatColors'
 
   target 'BluetoothTestTests' do
     inherit! :search_paths
